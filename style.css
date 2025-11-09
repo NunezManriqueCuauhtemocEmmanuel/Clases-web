@@ -62,6 +62,17 @@ div p{
     background-color: gold;
 }
 
+PSEUDOELEMENTOS
+
+ul{
+    margin 400px;
+}
+
+li::before{
+    content= 'emoji';
+    color: yellow;
+}
+
 .container:nth-child(3)::first-letter{
     background-color: blue;
     color: white;
@@ -128,7 +139,7 @@ img[src$='a.jpg']{
     100%{
         background: linear-gradient(to top, var(--color-final) , var(--color-inicial));
     }
-    
+
     /* 0%{
         background: var(--color-inicial);
     }
