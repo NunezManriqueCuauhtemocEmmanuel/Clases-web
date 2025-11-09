@@ -121,6 +121,7 @@ input::placeholder{
 
 .grow{
     animation: back 2s infinite alternate ease-in-out;
+    background-image: linear-gradient(to top, var(--color-inicial), var(--color-final));
     height: 100px;
     flex-grow: 1; /* Si existe flex-grow le chupa un huevo justify-content */
     flex-shrink: 1;
@@ -133,11 +134,13 @@ img[src$='a.jpg']{
 
 @keyframes back{
     0%{
-        background: linear-gradient(to top, var(--color-inicial) , var(--color-final));
+        --color-inicial: #911;
+        --color-final: rgb(24, 17, 153);
     }
 
     100%{
-        background: linear-gradient(to top, var(--color-final) , var(--color-inicial));
+        --color-inicial: rgb(110, 17, 153);
+        --color-final: rgb(153, 126, 17);
     }
 
     /* 0%{
