@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@property --color-inicial{
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #911;
+}
+
+@property --color-final{
+    syntax: '<color>';
+    inherits: true;
+    initial-value: rgb(24, 17, 153);
+}
+
+
+
+/* SELECTOR DECENDENTE
+
+div p{
+    color: rgb(7, 17, 118);
+}
+
+/*SELECTOR DE HIJOS*/
+
+/* div > p{
+    color: rgb(118, 7, 7);
+} */
+
+/*SELECTOR DE ADYECENTE*/
+
+/* p + p{
+    color: rgb(42, 165, 46); 
+} */
+
+/*SELECTOR DE HERMANOS ADYACENTES*/
+
+/* div ~ p{
+    color: initial;
+} */ 
+
+/* PSEUDOCLASES Y PSEUDOELEMENTOS */
+/* 
+.container{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+}
+
+.container:hover{
+    scale: 1.1;
+}
+
+.container:active{
+    background-color: red;
+}
+
+.container:nth-child(3){
+    background-color: gold;
+}
+
+.container:nth-child(3)::first-letter{
+    background-color: blue;
+    color: white;
+}
+
+.container p::first-letter{
+    font-size: 36px;
+    color: green;
+}
+
+.container p::first-line{
+    color: red;
+}
+
+
+li::marker{
+    color: rgb(154, 105, 105);
+}
+
+input::placeholder{
+    color: aqua;
+} */
+
+.flex{
+    display: flex; /*IMPORTANTE SIN ESTO NO EXISTE FLEXBOX*/
+    border-color: black;
+    border: 2px solid;
+    height: 500px;
+    /*Estas son las propiedades basicas para hacer en flex*/
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap ; /*Cuando estan en flex direction row los elementos se van a acamodar abajo pero si esta en column los elementos se acomodaran a la derecha*/
+    flex-direction: row; /*Cuando esta en column los ejes se invierten*/
+}
+
+.loquesea:nth-child(2n){
+    background-color: rgb(53, 53, 122);
+    font-size: 38px;
+}
+
+.loquesea{
+    height: 100px;
+    padding: 30px;
+    background-color: rgb(110, 110, 187);
+}
+
+.grow{
+    animation: back 2s infinite alternate ease-in-out;
+    height: 100px;
+    flex-grow: 1; /* Si existe flex-grow le chupa un huevo justify-content */
+    flex-shrink: 1;
+}
+
+
+img[src$='a.jpg']{
+    border-radius: 50%;
+}
+
+@keyframes back{
+    0%{
+        background: linear-gradient(to top, var(--color-inicial) , var(--color-final));
+    }
+
+    100%{
+        background: linear-gradient(to top, var(--color-final) , var(--color-inicial));
+    }
+    
+    /* 0%{
+        background: var(--color-inicial);
+    }
+    100%{
+        background: var(--color-final);
+    } */
+
+}
